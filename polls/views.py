@@ -58,3 +58,9 @@ def vote(request, question_id):
 # New owner view function
 def owner(request):
     return HttpResponse("Hello, world. c433ceb4 is the polls index.")
+
+from django.http import HttpRequest, HttpResponse
+def owner(request: HttpRequest) -> HttpResponse:
+        response = HttpResponse()
+        response.write("Hello, world. e4fd4db1 is the polls index.")
+        return response
